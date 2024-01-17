@@ -20,16 +20,27 @@ Prison Escape
 ! TXT_MODE 0
 
 PAL 0
-255,255,0
-0,0,216
-255,2,31
+254,192,112
+2,4,146
+223,2,27
 NAME PrisionOutside
 
 PAL 1
-160,195,196
+130,158,159
 0,0,216
-255,2,31
+253,3,74
 NAME PrisionInside
+
+PAL 2
+255,0,20
+0,114,255
+0,98,255
+
+PAL 3
+255,225,8
+2,4,146
+255,2,67
+NAME PrisonBright
 
 ROOM 0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,c
@@ -140,7 +151,7 @@ ROOM 4
 0,0,0,0,0,0,0,c,13,13,19,13,13,13,13,13
 NAME PrisonEscapeDown
 EXT 10,15 5 10,0
-PAL 0
+PAL 3
 TUNE 5
 
 ROOM 5
@@ -163,7 +174,7 @@ ROOM 5
 NAME PrisonEscapeBottom
 EXT 10,0 4 10,15
 EXT 0,15 6 15,15
-PAL 0
+PAL 3
 TUNE 5
 
 ROOM 6
@@ -185,7 +196,7 @@ ROOM 6
 0,0,0,1d,1d,1d,1d,1d,1d,1d,1d,1d,1d,1d,1d,1d
 NAME PrisonDesert1
 ITM 5 6,15
-PAL 0
+PAL 3
 TUNE 5
 
 ROOM 7
@@ -207,7 +218,7 @@ ROOM 7
 0,0,0,1d,1d,1d,1l,1d,1d,1d,1d,1d,1d,1d,1d,1d
 NAME PrisonDesert2
 ITM 6 4,15
-PAL 0
+PAL 3
 
 TIL 10
 00101010
@@ -1722,7 +1733,7 @@ DLG r
 NAME DesertDialog2 dialog
 
 DLG s
-{end}
+{blip "3"}{end}{drws "A"} . . .*VROM VROM*
 NAME Car4 dialog
 
 VAR a
@@ -1839,6 +1850,13 @@ NAME pick up key
 ENV 99 65 6 96 152
 BEAT 95 0
 SQR P4
+
+BLIP 3
+D5,F#5,G5
+NAME Gunshot
+ENV 113 113 5 32 77
+BEAT 480 0
+SQR P8
 
 
 </script>
